@@ -11,7 +11,7 @@ for i in range(len(mlist)) :
 harf=["A","B","C","D","E","F"]
 l1=[]
 final=[]
-print("BİRİNCİ TUR KARŞILAŞMALARI")
+print("First tour matches")
 print("")
 
 for i in range (len(guys)):
@@ -28,8 +28,8 @@ for i in range (len(guys)):
         count=count+1
         
         if count==4:
-            print(l1[0],"ve",l1[1])
-            print(l1[2],"ve",l1[3])
+            print(l1[0],"and",l1[1])
+            print(l1[2],"and",l1[3])
             l1=[]
             print("")
             break
@@ -37,23 +37,23 @@ for i in range (len(guys)):
 if len(guys)==3:
     t1=random.choice(guys)
     guys.remove(t1)
-    print(harf[i],"grubu")
+    print(harf[i],". group")
     i=i+1
-    print(guys[0],"ve",guys[1])
+    print(guys[0],"and",guys[1])
     print("")
-    print("bir üst tura çıkan:",t1)
+    print("got through to upper tour:",t1)
     final.append(t1)
     print("")
     print("")
     
 elif len(guys)==2:
-    print(harf[i],"grubu")
+    print(harf[i],". group")
     i=i+1
     print(guys[0],"ve",guys[1])
     print("")
     print("")
 elif len(guys)==1:
-    print("bir üst tura çıkan:",guys[0]) 
+    print("got through to upper tour :",guys[0]) 
     final.append(guys[0])
     print("")
     print("")
@@ -61,11 +61,11 @@ elif len(guys)==1:
 a=i
 
 
-print("FİNAL TURU KARŞILAŞMALARI")
+print("FINAL TOUR EVENTS")
 print("")
 
 
-finalist=["A GRUBU KAZANANI","B GRUBU KAZANANI","C GRUBU KAZANANI","D GRUBU KAZANANI","E GRUBU KAZANANI","F GRUBU KAZANANI"]
+finalist=["A GROUP WINNER","B GROUP WINNER","C GROUP WINNER","D GROUP WINNER","E GROUP WINNER","F GROUP WINNER"]
 for i in range (a):
     final.append(finalist[i])
 
@@ -74,10 +74,10 @@ for i in range (a):
 newlist=[]
 a=len(final)
 if len(final)==4:
-    print("yarı final:")
+    print("semi final:")
 elif len(final)==2:
     print("final:")
-#count=1
+
 for i in range(a) :
     try:
         x=random.choice(final)
@@ -87,11 +87,8 @@ for i in range(a) :
     try:
         y=random.choice(final)
         final.remove(y)
-        print(x,"ve",y)
+        print(x,"and",y)
     except:
         print("")
-        print("finale çıkan:",x)
+        print("got through to upper tour:",x)
         
-     ##ayak koyabilirsin
-#    count=count+1
-##İKİNCİ FİNALİST???
